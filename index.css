@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#scroll-down{
+    height: 50px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    z-index: 1;
+    position: absolute;
+    
+}

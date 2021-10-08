@@ -1,0 +1,61 @@
+
+html{
+    scroll-behavior: smooth;
+}
+.scroll-down{
+    height: 41px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    z-index: 1;
+    cursor: pointer;
+    margin-bottom:30px;
+}
+.container{
+    margin-top: 62px;
+}
+.scroll-down::before,
+.scroll-down::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border:2px solid black;
+    height: 10px;
+    width: 10px;
+    transform:translate(-50%,-100%) rotate(45deg);
+    border-top: transparent;
+    border-left:transparent;
+    animation: scroll-down 1s infinite;
+}
+.scroll-down::after{
+    width: 10px;
+    top: 30%;
+    height: 10px;
+    animation-delay: .3s;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0%;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity:1
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .scroll-down{
+        display: none;
+    }
+}
+
